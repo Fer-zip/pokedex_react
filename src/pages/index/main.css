@@ -1,0 +1,162 @@
+/* Main.jsx */
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 8dvh;
+    max-width: 95%;
+    margin: 3dvh auto;
+    padding: 10dvh;
+    border-radius: 16px;
+    background-color: #fff;
+}
+
+
+/* header.jxs */
+.headerPage{
+    display: grid;
+    width: 100%;
+    gap: 2dvh;
+    padding: 5dvh;
+}
+
+.ctnPrincipal{
+    display: flex;
+    flex-direction: row;
+    gap: 2dvh;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    justify-content: flex-start;
+}
+
+.Titulo{
+    color: #fff;
+    font-size: 3rem;
+}
+
+nav{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: #fff;
+}
+
+.listNav{
+    display: flex;
+    flex-direction: row;
+    gap: 13px;
+    list-style: none;
+}
+
+.itemListNav{
+    padding: 5px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+}
+
+.listRegiones{
+    position: absolute;
+    top: 110%;
+    right: 0;
+    left: 0;
+    background: red;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    gap: 5px;
+    outline: solid 2px;
+    z-index: 1;
+
+    animation: regionesAni 0.3s forwards;
+}
+
+
+@keyframes regionesAni {
+    from{
+        top: 150%
+    }
+    to{
+        top: 110%;
+    }
+}
+
+
+.itemListRegiones{
+    padding: 5px;
+    border-radius: 5px;
+    list-style: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.itemListRegiones:hover{
+    background-color: white;
+    color: red;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.contentItemListNav{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.formBuscador{
+    display: flex;
+    flex-direction: row;
+    gap: 1dvh;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 15px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.inputBuscador{
+    border: none;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+    background-color: transparent;
+}
+
+.inputBuscador:focus{
+    outline: none;
+}
+
+.submitBuscador{
+    padding: 5px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    color: white;
+    background-color: #3e3e3e;
+}
+
+
+/* Cnt_card_pokemon.jsx */
+.Content_card_pokemon{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5dvh;
+}
+
+
+@media (max-width: 1000px){
+    .Content_card_pokemon{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ctnImagePokemon{
+        padding: 1dvh 6dvh;
+    }
+}
