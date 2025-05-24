@@ -7,7 +7,7 @@ import MainBusquedas from "./pages/index/MainBusquedas";
 
 function Main() {
   return (
-    <Router>
+    <Router basename="/pokedex_react">
       <Header />
 
       <main>
